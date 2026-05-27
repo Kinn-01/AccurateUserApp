@@ -1,4 +1,4 @@
 package com.example.accurateuserapp.data.remote.dto
 
-class UserListResponse {
-}
+
+typealias UserListResponse = List<UserDto>
