@@ -12,7 +12,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.accurateuserapp.R
 
 @Composable
 fun FilterChips(
@@ -30,7 +32,7 @@ fun FilterChips(
             FilterChip(
                 selected = selectedCity == null,
                 onClick = { onCitySelected(null) },
-                label = { Text("Semua Kota") },
+                label = { Text(stringResource(R.string.all_city)) },
                 shape = RoundedCornerShape(12.dp),
                 colors = FilterChipDefaults.filterChipColors(
                     selectedContainerColor = MaterialTheme.colorScheme.primary,

@@ -14,13 +14,15 @@ import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.accurateuserapp.R
 
 @Composable
 fun SearchBar(
     query: String,
     onQueryChange: (String) -> Unit,
-    placeholder: String = "Cari nama, email, atau nomor telepon...",
+    placeholder: String = stringResource(R.string.placeholder_searchbar),
     modifier: Modifier = Modifier
 ) {
     OutlinedTextField(
@@ -44,7 +46,7 @@ fun SearchBar(
                 IconButton(onClick = { onQueryChange("") }) {
                     Icon(
                         imageVector = Icons.Default.Clear,
-                        contentDescription = "Hapus pencarian",
+                        contentDescription = stringResource(R.string.delete_search),
                         tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
                     )
                 }

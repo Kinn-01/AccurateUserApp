@@ -31,10 +31,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.accurateuserapp.R
 import com.example.accurateuserapp.domain.model.User
 import com.example.accurateuserapp.ui.theme.RoyalBlue
 import com.example.accurateuserapp.ui.theme.SuccessColor
@@ -117,7 +119,9 @@ fun UserCard(
                         )
                         Icon(
                             imageVector = genderIcon,
-                            contentDescription = if (isMale) "Laki-laki" else "Perempuan",
+                            contentDescription = if (isMale) stringResource(R.string.male) else stringResource(
+                                R.string.female
+                            ),
                             tint = avatarTextColor,
                             modifier = Modifier.size(20.dp)
                         )
@@ -226,7 +230,7 @@ fun UserCard(
                             )
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
-                                text = "Menunggu Sinkronisasi",
+                                text = stringResource(R.string.waiting_sync),
                                 color = WarningColor,
                                 fontSize = 10.sp,
                                 fontWeight = FontWeight.Bold
@@ -244,13 +248,13 @@ fun UserCard(
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
                             imageVector = Icons.Default.CloudDone,
-                            contentDescription = "Tersinkronisasi",
+                            contentDescription = stringResource(R.string.synchronize),
                             tint = SuccessColor.copy(alpha = 0.6f),
                             modifier = Modifier.size(14.dp)
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = "Tersinkronisasi",
+                            text = stringResource(R.string.synchronize),
                             color = SuccessColor.copy(alpha = 0.6f),
                             fontSize = 10.sp
                         )

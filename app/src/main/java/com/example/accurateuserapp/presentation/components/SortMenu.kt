@@ -15,7 +15,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.accurateuserapp.R
 import com.example.accurateuserapp.domain.model.SortOrder
 
 @Composable
@@ -30,7 +32,7 @@ fun SortMenu(
         IconButton(onClick = { expanded = true }) {
             Icon(
                 imageVector = Icons.Default.Sort,
-                contentDescription = "Urutkan"
+                contentDescription = stringResource(R.string.sort)
             )
         }
         DropdownMenu(
@@ -38,21 +40,21 @@ fun SortMenu(
             onDismissRequest = { expanded = false }
         ) {
             DropdownMenuItem(
-                text = { Text("Bawaan") },
+                text = { Text(stringResource(R.string.default)) },
                 onClick = {
                     onSortOrderSelected(SortOrder.NONE)
                     expanded = false
                 }
             )
             DropdownMenuItem(
-                text = { Text("Nama (A - Z)") },
+                text = { Text(stringResource(R.string.name_asc)) },
                 onClick = {
                     onSortOrderSelected(SortOrder.NAME_ASC)
                     expanded = false
                 }
             )
             DropdownMenuItem(
-                text = { Text("Nama (Z - A)") },
+                text = { Text(stringResource(R.string.name_desc)) },
                 onClick = {
                     onSortOrderSelected(SortOrder.NAME_DESC)
                     expanded = false

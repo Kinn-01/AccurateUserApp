@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AccurateUserApp</string>
+    <string name="data_empty">Tidak Ada Data</string>
+    <string name="all_city">Semua Kota</string>
+    <string name="placeholder_searchbar">Cari nama, email, atau nomor telepon...</string>
+    <string name="delete_search">Hapus pencarian</string>
+    <string name="sort">Urutkan</string>
+    <string name="default">Default</string>
+    <string name="name_asc">Nama (A - Z)</string>
+    <string name="name_desc">Nama (Z - A)</string>
+    <string name="male">Laki-laki</string>
+    <string name="female">Perempuan</string>
+    <string name="waiting_sync">Menunggu Sinkronisasi</string>
+    <string name="synchronize">Tersinkronisasi</string>
 </resources>
