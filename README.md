@@ -11,7 +11,6 @@ Aplikasi manajemen data pengguna berbasis Android yang dibangun dengan pendekata
 - [Alasan Desain Tampilan & Interaksi](#-alasan-desain-tampilan--interaksi)
 - [Arsitektur Proyek](#-arsitektur-proyek)
 - [Struktur Folder](#-struktur-folder)
-- [Pemenuhan Nice-to-Have Checklist](#-pemenuhan-nice-to-have-checklist)
 
 ---
 
