@@ -22,8 +22,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.example.accurateuserapp.R
 import com.example.accurateuserapp.presentation.components.EmptyState
 import com.example.accurateuserapp.presentation.components.FilterChips
 import com.example.accurateuserapp.presentation.components.LoadingIndicator
@@ -46,7 +48,7 @@ fun UserListScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = "Accurate Users",
+                        text = stringResource(R.string.accurate_users),
                         fontWeight = FontWeight.Bold,
                         style = MaterialTheme.typography.titleLarge
                     )
@@ -72,7 +74,7 @@ fun UserListScreen(
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
-                    contentDescription = "Tambah User"
+                    contentDescription = stringResource(R.string.add_user)
                 )
             }
         },
@@ -111,9 +113,9 @@ fun UserListScreen(
                         }
                         state.filteredUsers.isEmpty() -> {
                             val emptyMsg = if (state.searchQuery.isNotEmpty() || state.selectedCity != null) {
-                                "Tidak ditemukan user yang cocok dengan pencarian Anda."
+                                stringResource(R.string.user_not_found)
                             } else {
-                                "Belum ada data user. Ketuk tombol '+' untuk menambahkan."
+                                stringResource(R.string.user_empty)
                             }
                             EmptyState(message = emptyMsg)
                         }

@@ -3,7 +3,6 @@ package com.example.accurateuserapp.presentation.adduser
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -52,10 +51,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import com.example.accurateuserapp.R
 import com.example.accurateuserapp.ui.theme.RoyalBlue
 import com.example.accurateuserapp.ui.theme.Turquoise
 
@@ -81,7 +82,7 @@ fun AddUserScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = "Tambah User Baru",
+                        text = stringResource(R.string.add_new_user),
                         fontWeight = FontWeight.Bold,
                         style = MaterialTheme.typography.titleMedium
                     )
@@ -90,7 +91,7 @@ fun AddUserScreen(
                     IconButton(onClick = onNavigateBack) {
                         Icon(
                             imageVector = Icons.Default.ArrowBack,
-                            contentDescription = "Kembali"
+                            contentDescription = stringResource(R.string.back)
                         )
                     }
                 },
@@ -115,8 +116,8 @@ fun AddUserScreen(
             OutlinedTextField(
                 value = state.name,
                 onValueChange = { viewModel.onNameChange(it) },
-                label = { Text("Nama Lengkap") },
-                placeholder = { Text("Masukkan nama lengkap...") },
+                label = { Text(stringResource(R.string.full_name)) },
+                placeholder = { Text(stringResource(R.string.placeholder_full_name)) },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Default.Person,
@@ -142,7 +143,7 @@ fun AddUserScreen(
             // Gender Selector Card Group (Extremely Premium UI element!)
             Column(modifier = Modifier.fillMaxWidth()) {
                 Text(
-                    text = "Jenis Kelamin",
+                    text = stringResource(R.string.gender),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.8f)
@@ -178,7 +179,7 @@ fun AddUserScreen(
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = "Laki-laki",
+                                text = stringResource(R.string.male),
                                 fontWeight = if (isMaleSelected) FontWeight.Bold else FontWeight.Normal,
                                 color = if (isMaleSelected) RoyalBlue else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
                             )
@@ -211,7 +212,7 @@ fun AddUserScreen(
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                text = "Perempuan",
+                                text = stringResource(R.string.female),
                                 fontWeight = if (isFemaleSelected) FontWeight.Bold else FontWeight.Normal,
                                 color = if (isFemaleSelected) Turquoise else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
                             )
@@ -226,8 +227,8 @@ fun AddUserScreen(
             OutlinedTextField(
                 value = state.address,
                 onValueChange = { viewModel.onAddressChange(it) },
-                label = { Text("Alamat") },
-                placeholder = { Text("Masukkan alamat tempat tinggal...") },
+                label = { Text(stringResource(R.string.address)) },
+                placeholder = { Text(stringResource(R.string.placeholder_address)) },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Default.Home,
@@ -256,8 +257,8 @@ fun AddUserScreen(
                     value = state.city,
                     onValueChange = { viewModel.onCityChange(it) },
                     readOnly = false,
-                    label = { Text("Kota") },
-                    placeholder = { Text("Pilih atau masukkan nama kota...") },
+                    label = { Text(stringResource(R.string.city)) },
+                    placeholder = { Text(stringResource(R.string.placeholder_city)) },
                     leadingIcon = {
                         Icon(
                             imageVector = Icons.Default.LocationCity,
@@ -307,8 +308,8 @@ fun AddUserScreen(
             OutlinedTextField(
                 value = state.email,
                 onValueChange = { viewModel.onEmailChange(it) },
-                label = { Text("Email") },
-                placeholder = { Text("Contoh: budi@gmail.com") },
+                label = { Text(stringResource(R.string.email)) },
+                placeholder = { Text(stringResource(R.string.placeholder_email)) },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Default.Email,
@@ -335,8 +336,8 @@ fun AddUserScreen(
             OutlinedTextField(
                 value = state.phoneNumber,
                 onValueChange = { viewModel.onPhoneNumberChange(it) },
-                label = { Text("Nomor Telepon") },
-                placeholder = { Text("Contoh: 081234567890") },
+                label = { Text(stringResource(R.string.telephone_number)) },
+                placeholder = { Text(stringResource(R.string.placeholder_telephone_number)) },
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Default.Phone,
@@ -380,7 +381,7 @@ fun AddUserScreen(
                     )
                 } else {
                     Text(
-                        text = "Simpan User",
+                        text = stringResource(R.string.save_user),
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold
                     )

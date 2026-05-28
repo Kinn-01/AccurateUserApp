@@ -40,7 +40,7 @@ fun SortMenu(
             onDismissRequest = { expanded = false }
         ) {
             DropdownMenuItem(
-                text = { Text(stringResource(R.string.default)) },
+                text = { Text(stringResource(R.string.bawaan)) },
                 onClick = {
                     onSortOrderSelected(SortOrder.NONE)
                     expanded = false
