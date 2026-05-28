@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "445986489417",
+    "project_id": "accurateuserapp-1c609",
+    "storage_bucket": "accurateuserapp-1c609.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445986489417:android:86887dd7200b9852ceab98",
+        "android_client_info": {
+          "package_name": "com.example.accurateuserapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDruTSKIgw7oUuG_hjV7hIOZNzqwA4hYt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
